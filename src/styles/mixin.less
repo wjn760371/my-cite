@@ -1,0 +1,30 @@
+@import "~@/styles/var.less";
+
+//提供各种混合样式
+.self-center(@position: absolute){
+  position: @position;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.self-fill(@position: absolute){
+  position: @position;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll(){
+  &::-webkit-scrollbar{
+    width: 5px;
+    height: 3px;
+    background: lighten(@gray, 10%);
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 50%;
+    width: 10px;
+    background: #cc3600;
+  }
+}
